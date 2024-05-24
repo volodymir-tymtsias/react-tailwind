@@ -1,6 +1,6 @@
 const borderStyles = "border-2 border-almost-black hover:border-medium-gray";
 const filledStyles =
-  "text-almost-white bg-black font-bold py-4 px-6 mx-0 hover:bg-transparent border-2 border-almost-black";
+  "text-white bg-black font-bold mx-0 hover:bg-transparent border-2 border-almost-black";
 
 const Button = ({ children = "", hasBorder = false, isFilled = false }) => {
   return (

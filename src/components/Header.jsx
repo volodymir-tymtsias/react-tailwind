@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className="flex items-center">
       <LogoIcon />
-      <nav className="flex space-x-6 ml-8">
+      <nav className="hidden xl:flex space-x-6 ml-8">
         <NavItem
           text="Feature"
           selectedMenu={selectedMenu}
