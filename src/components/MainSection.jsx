@@ -8,8 +8,8 @@ import Button from "./Button";
 
 const MainSection = () => {
   return (
-    <section className="w-full flex mt-6 justify-center flex-col xl:flex-row">
-      <div className="relative text-center order-2 xl:order-1 xl:text-left xl:w-2/4 xl:mt-60 mt-12">
+    <main className="w-full flex mt-6 justify-center flex-col xl:flex-row">
+      <section className="relative text-center order-2 xl:order-1 xl:text-left xl:w-2/4 xl:mt-60 mt-12">
         <h1 className="text-3xl xl:text-8xl font-black xl:whitespace-pre-line mt-6">{`Make\n remote work`}</h1>
         <p className="text-medium-gray text-lg my-12 whitespace-pre-line">
           {`Lorem ipsum dolor, sit amet consectetur adipisicing elit.\n Amet ullam dolorum animi atque vitae exercitationem\n quibusdam maiores adipisci qui harum.`}
@@ -21,14 +21,14 @@ const MainSection = () => {
           <Meet />
           <Maker />
         </div>
-      </div>
-      <div className="hidden w-2/4 mt-20 xl:flex xl:order-2">
+      </section>
+      <section className="hidden w-2/4 mt-20 xl:flex xl:order-2">
         <img src={MenImage} alt="hero" />
-      </div>
-      <div className="flex justify-center w-full mb-8 xl:hidden order-1">
+      </section>
+      <section className="flex justify-center w-full mb-8 xl:hidden order-1">
         <img src={MenImageMobile} alt="hero" />
-      </div>
-    </section>
+      </section>
+    </main>
   );
 };
 

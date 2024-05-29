@@ -27,3 +27,16 @@ svg {
   display: flex;
   align-items: center;
 }
+
+.mobile-menu {
+  animation: loadMenu 0.2s linear;
+}
+
+@keyframes loadMenu {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

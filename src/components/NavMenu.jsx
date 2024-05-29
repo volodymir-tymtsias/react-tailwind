@@ -1,15 +1,29 @@
-const { default: MenuItem } = require("./MenuItem");
+import React, { useState } from "react";
+import NavItem from "./NavItem";
+import DropDownMenu from "./DropDownMenu";
+import { COMPANY, FEATURES } from "../constants/menu";
 
-const NavMenu = ({ items = [] }) => {
+const NavMenu = ({ stylesNav, stylesDropDownMenu }) => {
+  const [selectedMenu, setSelectedMenu] = useState("");
   return (
-    <div
-      className="flex flex-col px-4 py-2 bg-almost-white dr drop-shadow rounded-lg
-      absolute top-10 right-0 w-36 space-y-2 z-30"
-    >
-      {items.map(({ text, icon }) => (
-        <MenuItem key={text} text={text} icon={icon} />
-      ))}
-    </div>
+    <nav className={stylesNav}>
+      <NavItem
+        text="Feature"
+        selectedMenu={selectedMenu}
+        handlerMenuOpen={setSelectedMenu}
+      >
+        <DropDownMenu items={FEATURES} styles={stylesDropDownMenu} />
+      </NavItem>
+      <NavItem
+        text="Company"
+        selectedMenu={selectedMenu}
+        handlerMenuOpen={setSelectedMenu}
+      >
+        <DropDownMenu items={COMPANY} styles={stylesDropDownMenu} />
+      </NavItem>
+      <NavItem text="Careers" handlerMenuOpen={setSelectedMenu} />
+      <NavItem text="About" handlerMenuOpen={setSelectedMenu} />
+    </nav>
   );
 };
 
